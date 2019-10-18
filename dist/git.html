@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="css/materialize.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/06a3e9347a.js"></script>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>git | Andrew Pang</title>
+</head>
+
+<body>
+    <header>
+        <nav style="height: 64px;">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center"><i class="brand-logo--icon fab fa-git"></i></a>
+                <ul id="nav-mobile" class="left table-of-contents">
+                    <li><a href="https://vault.andrewpang.org/">Home</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col m6">
+                        <div class="command">
+                            <h5 class="command__name"><code>git init</code></h5>
+                            <p class="command__description">Initialize an existing directpry as a Git repository</p>
+                        </div>
+                        <div class="command">
+                            <h5 class="command__name"><code>git clone [url]</code></h5>
+                            <p class="command__description">Retrieve an entire repository from a hosted location via URL
+                            </p>
+                        </div>
+                        <div class="command">
+                            <h5 class="command__name"><code>git remote add [alias] [url]</code></h5>
+                            <p class="command__description">Add a git URL as an alias</p>
+                        </div>
+                        <hr>
+                        <div class="command">
+                            <h5 class="command__name"><code>git status</code></h5>
+                            <p class="command__description">Show modified files in working directory, staged for your
+                                next
+                                commit</p>
+                        </div>
+                        <div class="command">
+                            <h5 class="command__name"><code>git pull</code></h5>
+                            <p class="command__description">Fetch and merge any commits from the tracking remote branch
+                            </p>
+                        </div>
+                        <div class="command">
+                            <h5 class="command__name"><code>git add [file]</code></h5>
+                            <p class="command__description">Add a file as it looks now to your next commit [stage]</p>
+                        </div>
+                        <div class="command">
+                            <h5 class="command__name"><code>git reset [file]</code></h5>
+                            <p class="command__description">Unstage a file while retaining the changes in working
+                                directory
+                            </p>
+                        </div>
+                        <div class="command">
+                            <h5 class="command__name"><code>git commit -m "[message]"</code></h5>
+                            <p class="command__description">Commit your staged content as a new commit snapshot</p>
+                        </div>
+                    </div>
+                    <div class="col m6">
+                        <div class="command">
+                            <h5 class="command__name"><code>git branch</code></h5>
+                            <p class="command__description">List your branches. A * will appear next to the currently
+                                active
+                                branch</p>
+                        </div>
+                        <div class="command">
+                            <h5 class="command__name"><code>git branch [branch-name]</code></h5>
+                            <p class="command__description">Create a new branch at the current commit</p>
+                        </div>
+                        <div class="command">
+                            <h5 class="command__name"><code>git branch -d [branch-name]</code></h5>
+                            <p class="command__description">Delete [branch-name]</p>
+                        </div>
+                        <div class="command">
+                            <h5 class="command__name"><code>git branch -m [old-name] [new-name]</code></h5>
+                            <p class="command__description">Rename branch from [old-name] to [new-name]</p>
+                        </div>
+                        <div class="command">
+                            <h5 class="command__name"><code>git checkout [branch-name]</code></h5>
+                            <p class="command__description">Switch to another branch and check it out into your working
+                                directory</p>
+                        </div>
+                        <div class="command">
+                            <h5 class="command__name"><code>git merge [branch-name]</code></h5>
+                            <p class="command__description">Merge the specified branch's history into the current one
+                            </p>
+                        </div>
+
+                        <hr>
+                        <div class="command">
+                            <h5 class="command__name"><code>git log</code></h5>
+                            <p class="command__description">Show all commits in the current branch's history</p>
+                        </div>
+
+                        <hr>
+                        <div class="command">
+                            <h5 class="command__name"><code>git rm [file]</code></h5>
+                            <p class="command__description">Delete the file from project and stage the removal for
+                                commit
+                            </p>
+                        </div>
+                        <div class="command">
+                            <h5 class="command__name"><code>git mv [existing-path] [new-path]</code></h5>
+                            <p class="command__description">Change an existing file path and stage the move</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <!-- FAQ -->
+                <div class="row">
+                    <ul class="collapsible">
+                        <li>
+                            <div class="collapsible-header">Importing an existing project to GitHub</div>
+                            <div class="collapsible-body">
+                                <ol>
+                                    <li><code>git init</code></li>
+                                    <li><code>git add .</code></li>
+                                    <li><code>git commit -m "Hello World"</code></li>
+                                    <li><code>git remote add origin <i>url.git</i> #Sets the new remote</code></li>
+                                    <li><code>git remote -v #Verifies the new remote URL</code></li>
+                                    <li><code>git push -u origin master #Pushes the changes in your local repository up
+                                            to the remote repository you specified as the origin</code></li>
+                                </ol>
+                                <a
+                                    href="https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line">source</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">A Common Commit Workflow</div>
+                            <div class="collapsible-body">
+                                <ol>
+                                    <li><code>git add</code></li>
+                                    <li><code>git stash --keep-index</code></li>
+                                    <li><code>TEST</code></li>
+                                    <li><code>git commit</code></li>
+                                    <li><code>git stash pop</code></li>
+                                </ol>
+                                <cite>Git Pocket Guide by Richard E. Silverman, pg 55</cite>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+    <footer></footer>
+    <!-- SCRIPT -->
+    <script src="js-andrew/sketch.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="js-materialize/bin/materialize.min.js"></script>
+</body>
+
+</html>
